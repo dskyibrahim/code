@@ -1,0 +1,49 @@
+def where_is_bob(time):
+    if 1 <= time <= 2:
+        print('Bob is streaming on his very successful twitch account.')
+        return('Busy')
+    elif 8 <= time <= 10:
+        print('Bob is in his 8:30 chemistry class (ewww)')
+        return('CH101')
+    elif 10.01 <= time <= 11:
+        print('Bob is sleeping in his dorm')
+        return('Studying')
+    elif 11.01 <= time <= 12:
+        print("Bob is eating at Talley and 'working' on homework")
+        return('Lunch')
+    elif 12.01 <= time <= 14:
+        print('Bob is in his physics class!')
+        return('PY 205')
+    elif 14.01 <= time <= 16:
+        print('Bob is in freshman english class...and asleep')
+        return('ENG 101')
+    else:
+        print('Bob is in his dorm eating or probably sleeping')
+        return('Busy, again')
+
+def test_example():
+    print("Testing Example 1")
+    print("Testing where_is_bob with 15")
+    expected = "ENG 101"
+    actual = where_is_bob(15)
+    if (expected == actual):
+          print("Test passed!")
+    else:
+          print("test failed")
+          print("Expected value: ", expected)
+          print("Actual value: ", actual) 
+
+def test_example2():
+    print("Testing Example 2")
+    print("Testing where_is_bob with 10.5")
+    expected = "Studying"
+    actual = where_is_bob(10.5)
+    if (expected == actual):
+          print("Test passed!")
+    else:
+          print("test failed")
+          print("Expected value: ", expected)
+          print("Actual value: ", actual) 
+
+test_example()
+test_example2()
